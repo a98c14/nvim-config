@@ -1,4 +1,5 @@
-lua require('a98c14/options')
+lua require('user/options')
+lua require('user/keymaps')
 
 call plug#begin('~/.vim/plugged')
 " Themes
@@ -31,8 +32,8 @@ lua require('lsp')
 
 colorscheme gruvbox
 
-nnoremap <Space> <Nop>
-let mapleader=" "
+" nnoremap <Space> <Nop>
+" let mapleader=" "
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
