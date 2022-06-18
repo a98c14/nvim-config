@@ -1,37 +1,4 @@
-set wildignore+=*.pyc
-set wildignore+=*_build/*
-set wildignore+=**/coverage/*
-set wildignore+=**/node_modules/*
-set wildignore+=**/android/*
-set wildignore+=**/ios/*
-set wildignore+=**/.git/*
-
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set hidden
-set nohlsearch
-set nu
-set relativenumber
-set noerrorbells
-set nowrap
-set noswapfile
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
-set incsearch
-set scrolloff=8
-set noshowmode
-set completeopt=menuone,noinsert,noselect
-set signcolumn=yes
-set clipboard+=unnamedplus
-
-" Folding
-set foldmethod=syntax
-set foldlevel=0
-" set foldclose=all
+lua require('a98c14/options')
 
 call plug#begin('~/.vim/plugged')
 " Themes
