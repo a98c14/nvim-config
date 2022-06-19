@@ -1,6 +1,5 @@
-lua require('user/options')
-lua require('user/keymaps')
 
+" PLUGINS
 call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'morhetz/gruvbox'
@@ -27,24 +26,17 @@ Plug 'nvim-lua/lsp_extensions.nvim'
 
 call plug#end()
 
-lua require('config')
-lua require('lsp')
+lua require('user/lsp')
+lua require('user/options')
+lua require('user/keymaps')
 
 colorscheme gruvbox
-
-" nnoremap <Space> <Nop>
-" let mapleader=" "
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
-
-nnoremap <leader>pf <cmd>lua require('telescope.builtin').find_files()<cr>
-
-noremap <C-j> 5j
-noremap <C-k> 5k
 
 augroup a98c14
     autocmd!

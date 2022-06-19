@@ -29,6 +29,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.clipboard = "unnamedplus"
 
 -- Folding
-vim.opt.foldmethod= "syntax"
-vim.opt.foldlevel=0
-vim.opt.foldclose="all"
+-- vim.opt.foldmethod= "syntax"
+-- vim.opt.foldlevel=0
+-- vim.opt.foldclose="all"
