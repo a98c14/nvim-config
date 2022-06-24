@@ -27,6 +27,7 @@ vim.opt.showmode=false
 vim.opt.completeopt= { "menuone", "noinsert", "noselect" }
 vim.opt.signcolumn = "yes"
 vim.opt.clipboard = "unnamedplus"
+vim.opt.termguicolors = true
 
 -- Folding
 -- vim.opt.foldmethod= "syntax"

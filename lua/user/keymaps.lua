@@ -15,8 +15,8 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("v", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("v", "p", '"_dP', opts)
 
 keymap("", "<C-j>", "5j", opts)

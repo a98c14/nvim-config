@@ -1,9 +1,12 @@
 call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'morhetz/gruvbox'
-
+Plug 'frenzyexists/aquarium-vim', { 'branch': 'develop' }
 " Telescope
 Plug 'nvim-telescope/telescope.nvim'
+
+" Core
+Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 
 " Utils
@@ -27,7 +30,8 @@ lua require('user/options')
 lua require('user/keymaps')
 lua require('user/treesitter')
 
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme aquarium
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
