@@ -1,5 +1,3 @@
-
-" PLUGINS
 call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'morhetz/gruvbox'
@@ -10,11 +8,9 @@ Plug 'nvim-lua/plenary.nvim'
 
 " Utils
 Plug 'jiangmiao/auto-pairs'
-
-" Neovim Tree shitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" LSP PlUGINS
+" LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'hrsh7th/nvim-cmp'
@@ -29,6 +25,7 @@ call plug#end()
 lua require('user/lsp')
 lua require('user/options')
 lua require('user/keymaps')
+lua require('user/treesitter')
 
 colorscheme gruvbox
 
@@ -43,7 +40,6 @@ augroup a98c14
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
+
 " LSP
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-" lua require('lspconfig').tsserver.setup{ on_attact=require('completion').on_attach }
-
