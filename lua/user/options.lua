@@ -28,6 +28,8 @@ vim.opt.completeopt= { "menuone", "noinsert", "noselect" }
 vim.opt.signcolumn = "yes"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
+vim.opt.cmdheight = 1
+vim.opt.guifont = "CaskaydiaCove NF"
 
 -- Folding
 -- vim.opt.foldmethod= "syntax"
