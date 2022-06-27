@@ -1,7 +1,11 @@
 call plug#begin('~/.vim/plugged')
 " Themes
 " Plug 'morhetz/gruvbox'
-Plug 'sainnhe/gruvbox-material'
+" Plug 'sainnhe/gruvbox-material'
+" Plug 'chriskempson/base16-vim'
+" Plug 'jacoborus/tender.vim'
+Plug 'w0ng/vim-hybrid'
+
 " Telescope
 Plug 'nvim-telescope/telescope.nvim'
 
@@ -38,7 +42,9 @@ lua require('user/options')
 lua require('user/keymaps')
 lua require('user/treesitter')
 
-colorscheme gruvbox-material
+set termguicolors
+set background=dark
+colorscheme hybrid
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
