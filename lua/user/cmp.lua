@@ -1,5 +1,5 @@
 local cmp = require('cmp')
-require('luasnip')
+local luasnip = require('luasnip')
 
 local check_backspace = function()
     local col = vim.fn.col "." - 1
@@ -36,6 +36,11 @@ local kind_icons = {
 }
 
 cmp.setup({
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end,
+    },
     mapping = {
         ["<C-k>"] = cmp.mapping.select_prev_item(),
         ["<C-j>"] = cmp.mapping.select_next_item(),
