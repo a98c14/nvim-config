@@ -6,9 +6,6 @@ call plug#begin('~/.vim/plugged')
 " Plug 'jacoborus/tender.vim'
 Plug 'w0ng/vim-hybrid'
 
-" Telescope
-Plug 'nvim-telescope/telescope.nvim'
-
 " Core
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -16,6 +13,7 @@ Plug 'nvim-lua/plenary.nvim'
 " Utils
 Plug 'jiangmiao/auto-pairs'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'numToStr/Comment.nvim'
 
 " cmp
 Plug 'hrsh7th/nvim-cmp'
@@ -34,6 +32,13 @@ Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
+" Misc
+Plug 'fatih/vim-go'
+
+" File Explorer
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()
 
 lua require('user/lsp')
@@ -41,6 +46,7 @@ lua require('user/cmp')
 lua require('user/options')
 lua require('user/keymaps')
 lua require('user/treesitter')
+lua require('user/comment')
 
 set termguicolors
 set background=dark
